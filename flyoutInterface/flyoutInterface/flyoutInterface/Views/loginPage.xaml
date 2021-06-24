@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyoutInterface.Views.loginPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
+
+
+            <Label Text="Let's chat E4!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Entry Placeholder="Enter Username" x:Name="Email"/>
+                <Entry Placeholder="Enter Password" x:Name="Password"/>
+                <Button BackgroundColor="Black"  Text="Login"  TextColor="White" x:Name="loginButton" Clicked="loginButton_Clicked"></Button>
+
+
+                <Button Text="Register" x:Name="RegButton" Clicked="RegButton_Clicked"></Button>
+                <!--<Button Text="FP" Clicked="Button_Clicked"
+                        ></Button>-->
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

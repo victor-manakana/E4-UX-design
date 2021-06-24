@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:flyoutInterface.Views"
+             FlyoutHeaderBehavior="CollapseOnScroll"
+             Shell.ItemTemplate="{StaticResource MenuTemplate}"
+             Shell.MenuItemTemplate="{StaticResource MenuTemplate}"
+             Shell.FlyoutHeaderTemplate="{StaticResource FlyoutHeaderTemplate}"
+             x:Class="flyoutInterface.AppShell">
+    
+    <!--Different columns-->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="titleColor">#0000ff</Color>
+            <Color x:Key="textColor">#ffffff</Color>
+            <Color x:Key="borderColor">#000000</Color>
+            <Color x:Key="recentTabColor">#ffff66</Color>
+            
+            <Style x:Key="e4Style" TargetType="Element">
+                
+                <!--Static borderColor color-->
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource borderColor}"/>
+                <!--For changing colors-->
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource titleColor}"/>
+                <!--For changing colors on a selected column-->
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource textColor}"/>
+                <!--for changing recent tab colors-->
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource recentTabColor}"/>
+                
+            </Style>
+            <!--Aligning the items in the flyout-->
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource e4Style}"/>
+                <DataTemplate x:Key="MenuTemplate">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Margin="30,10,20,10" Source="{Binding Icon}" WidthRequest="22" HeightRequest="22" HorizontalOptions="Start" VerticalOptions="Center"/>
+                        <Label Text="{Binding Title}" TextColor="#000000" FontSize="18" VerticalOptions="Center"/>
+                    </StackLayout>
+                </DataTemplate>
+                <DataTemplate x:Key="FlyoutHeaderTemplate">
+                        <ContentView BackgroundColor="{StaticResource borderColor}" HeightRequest="220">
+                        <Image Source="e4Logo.png" WidthRequest="130" HeightRequest="130" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </ContentView>
+                </DataTemplate>
+        </ResourceDictionary>
+    </Shell.Resources>
+    
+    <!--LOGIN BEFORE YOU COULD SEE ANYTHING-->
+    <TabBar>
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate views:loginPage}" />
+    </TabBar>
+
+    <!--FLYOUT MENU ITEMS-->
+    <!--Dashboard-->
+
+    <FlyoutItem>
+
+        <!-- flyout-->
+        <Tab Title="Dashboard" Icon="dashboard.png">
+            <ShellContent ContentTemplate="{DataTemplate views:dashBoardPage}"/>
+        </Tab>
+
+        <!-- Login flyout-->
+        <Tab Title="Login" Icon="login.png">
+            <ShellContent ContentTemplate="{DataTemplate views:loginPage}"/>
+        </Tab>
+
+        <!-- chat flyout-->
+        <Tab Title="Chat" Icon="chat.png">
+            <ShellContent ContentTemplate="{DataTemplate views:chatPage}"/>
+        </Tab>
+
+        <!-- Claims flyout-->
+        <Tab Title="Claims" Icon="claim.png">
+            <ShellContent ContentTemplate="{DataTemplate views:claimPage}"/>
+        </Tab>
+
+    </FlyoutItem>
+
+
+
+
+    <FlyoutItem Title="Dashboard" Icon="dashboard.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:dashBoardPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <!--Notification-->
+    <FlyoutItem Title="Notification" Icon="notification.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:notificationPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <!--Log Claim-->
+    <FlyoutItem Title="Log Claim" Icon="claim2.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:claimPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <!--Chat-->
+    <FlyoutItem Title="Chat" Icon="chatFly.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:chatPage}" />
+        </Tab>
+    </FlyoutItem>
+
+   
+
+    
+
+
+
+
+    <!--Aligning the content in the Flyout-->
+    
+    
+
+    <!--FOR THE TAB BAR BELOW-->
+    
+
+    <!--FOR FLYOUT MENU-->
+
+   
+
+    <!--<MenuItem Text="Log Claim" Command="{Binding NavigateCommand}" CommandParameter="claims" IconImageSource="claim2.png"/>-->
+    <!--<MenuItem Text="Notification" Command="{Binding NavigateCommand}" CommandParameter="notification" IconImageSource="notification.png"/>
+    <MenuItem Text="Chat" Command="{Binding NavigateCommand}" CommandParameter="chat" IconImageSource="chatFly.png"/>
+    <MenuItem Text="Logout" Command="{Binding NavigateCommand}" CommandParameter="logout" IconImageSource="logout.png"/>-->
+
+    <!--<ShellContent Title="Notification" ContentTemplate="{DataTemplate views:loginPage}"/>-->
+
+
+
+</Shell>

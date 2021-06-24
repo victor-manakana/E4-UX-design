@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "p97Zymw6rMardapubrhtqe8S677Ih5MSs5qnoszQFZPaHg1A+zvS7n2iwv295ID2BfGyuy6zKVmCHhvPCgF0QQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\TC-16\\source\\repos\\flyoutInterface\\flyoutInterface\\flyoutInterface.iOS\\flyoutInterface.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TC-16\\.nuget\\packages\\firebaseauthentication.net\\3.7.1\\firebaseauthentication.net.3.7.1.nupkg.sha512",
+    "C:\\Users\\TC-16\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\TC-16\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
